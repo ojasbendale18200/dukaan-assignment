@@ -47,15 +47,15 @@ const Payouts = () => {
             </svg>
 
             <input
-              class="placeholder outline-none border-none bg-transparent font-inter w-full "
+              className="placeholder outline-none border-none bg-transparent font-inter w-full "
               type="text"
               placeholder="Search features, tutorial, etc."
             />
           </div>
         </div>
 
-        <div class="flex gap-[10px]">
-          <div class="flex items-center justify-center bg-dukaan-gray-200 h-10 w-10 rounded-full cursor-pointer text-dukaan-gray-700">
+        <div className="flex gap-[10px]">
+          <div className="flex items-center justify-center bg-dukaan-gray-200 h-10 w-10 rounded-full cursor-pointer text-dukaan-gray-700">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -69,7 +69,7 @@ const Payouts = () => {
               />
             </svg>
           </div>
-          <div class="flex items-center justify-center bg-dukaan-gray-200 h-10 w-10 rounded-full cursor-pointer text-dukaan-gray-700">
+          <div className="flex items-center justify-center bg-dukaan-gray-200 h-10 w-10 rounded-full cursor-pointer text-dukaan-gray-700">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40"
@@ -93,6 +93,147 @@ const Payouts = () => {
           </div>
         </div>
       </header>
+
+      <section className="p-8">
+        <div className="flex items-center justify-between">
+          <p className="font-medium text-xl">Overview</p>
+          <div className="flex items-center gap-[6px] py-[6px] px-[10px] border border-dukaan-gray-300 rounded bg-white text-dukaan-gray-700">
+            <span>This month</span>
+            <svg
+              height="16px"
+              width="16px"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="svg-chevron-down-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </div>
+        </div>
+        <div className="mt-7 flex justify-between gap-6">
+          <div className="pt-[24px] bg-dukaan-blue-400 text-white w-full rounded-md flex flex-col gap-4">
+            <div className="flex gap-[6px] items-center px-[20px] font-light">
+              <p className="title">Next Payout</p>
+              <svg
+                width="18"
+                height="18"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                />
+              </svg>
+            </div>
+            <div className="flex items-center justify-between px-5 ">
+              <p className="font-medium text-[28px]">₹2,312.23</p>
+              <div className="flex gap-1 text-[14px] font-medium   cursor-pointer">
+                <p className="underline">23 orders</p>
+                <svg
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="svg-chevron-down-icon"
+                  style={{ transform: "rotate(270deg)", marginTop: "2px" }}
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="py-[10px] px-[20px] flex justify-between items-center text-sm font-light rounded-lg bg-dukaan-blue-600">
+              <p className="title">Next payout date:</p>
+              <p className="text">Today, 04:00PM</p>
+            </div>
+          </div>
+
+          <div className="py-6 px-5 bg-white rounded-lg w-full flex flex-col gap-4 relative h-[130px]">
+            <div className=" flex gap-[6px] items-center text-dukaan-gray-700">
+              <div className="title">Amount Pending</div>
+              <svg
+                width="18"
+                height="18"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                />
+              </svg>
+            </div>
+            <div className="flex items-center justify-between">
+              <p className="font-medium text-[28px]">₹92,312.20</p>
+              <div className="flex gap-1 text-[14px] font-medium text-dukaan-blue-400 cursor-pointer">
+                <p className="underline">13 orders</p>
+                <svg
+                  height="16px"
+                  width="16px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="svg-chevron-down-icon"
+                  style={{ transform: "rotate(270deg)", marginTop: "2px" }}
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="py-6 px-5 bg-white rounded-lg w-full flex flex-col gap-4 relative h-[130px]">
+            <div className="flex gap-[6px] items-center text-dukaan-gray-700">
+              <p className="title">Amount Processed</p>
+              <svg
+                width="18"
+                height="18"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                />
+              </svg>
+            </div>
+            <div className="flex items-center justify-between">
+              <p className="font-medium text-[28px]">₹23,92,312.19</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   );
 };
