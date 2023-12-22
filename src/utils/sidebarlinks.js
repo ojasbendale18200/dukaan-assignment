@@ -46,7 +46,7 @@ export const sidebarLinks = [
     label: "Audiance",
   },
   {
-    imgURL: "/svg/appearnce.svg",
+    imgURL: "/svg/appearance.svg",
     route: "/Appearance",
     label: "Appearance",
   },

@@ -1,12 +1,13 @@
 import React from "react";
+import { sidebarLinks } from "../utils/sidebarlinks";
 
 const Sidebar = () => {
   return (
-    <aside className="sticky inset-0 w-224 bg-dukaan-blue-800 h-screen text-dukaan-gray-300">
-      <div className="flex flex-col h-full p-4 gap-4">
-        <div className="p-4 flex gap-4 items-center">
+    <aside className="sticky inset-0 w-[224px] bg-dukaan-blue-800 h-screen text-dukaan-gray-300">
+      <div className="flex flex-col h-full p-2 gap-4">
+        <div className="p-4 flex gap-3 items-center">
           <img
-            src="/store-def.jpg"
+            src="https://s3-alpha-sig.figma.com/img/18ef/52d9/1494ed3109e53ab9db09579cd5d8839e?Expires=1704067200&Signature=H~uS3DJWoUk3Mt34HePdNdEHwWddO~To5UR50YtDRYkyeIGjQkRZcoUOTftRD5yQRfYJ2r-wPlD7ZUCnU4zvLPPZJ-GoURTTXlCSvi2KUOZMF0S5pTbk~3Ce6tIvt-2wtx1ZHVbNIIuIsPHa0YxO1x7N4MVtoS9Z7-CpCYHxKWzrmT6Cyc7uk9-mKH~YA9qBqXGr1WEGQMog4s7LFR4qs9EK6wTTAKvtd7o4C0bV2o2jhqNWUEISPvCWueE7vQzrjtIOuA1jRWZsvC6GV0y4bbVV4Rv8X-9700pRa9qNmWOXPq8HQvVczcbI3UlRKC6bg9SVdPdQSYZpsxMl7NAYIA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
             className="rounded-md h-10 w-10"
             alt="user logo"
           />
@@ -30,6 +31,36 @@ const Sidebar = () => {
                 fill="white"
               />
             </svg>
+          </div>
+        </div>
+        <ul className="list-none flex-1 p-[8px]">
+          {sidebarLinks.map((item) => {
+            const isActive = item.label === "Payouts";
+
+            return (
+              <li
+                key={item.label}
+                className={`flex items-center gap-[12px] py-[8px] px-[16px] rounded mb-[4px] text-sm hover: cursor-pointer bg-[#ffffff0d] ${
+                  isActive ? "active" : ""
+                }`}
+                style={{
+                  backgroundColor: isActive ? "#ffffff0d" : "transparent",
+                  color: isActive ? "white" : "inherit",
+                }}
+              >
+                <img src={item.imgURL} alt={item.label} />
+                <p>{item.label}</p>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="mt-auto mb-[20px] ml-2 mr-2 py-[6px] px-[16px] flex items-center gap-3 bg-[#ffffff0d]  rounded text-sm">
+          <div class="credits__icon">
+            <img src="/svg/credits.svg" alt="" />
+          </div>
+          <div className="flex flex-col gap-[3px]">
+            <span>Available credits</span>
+            <span className="text-white text-sm  font-[500]">222.10</span>
           </div>
         </div>
       </div>
