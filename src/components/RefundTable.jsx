@@ -36,7 +36,7 @@ const RefundTable = () => {
                   <div
                     className={`h-[8px] w-[8px] rounded-full ${
                       item.status === "Processing"
-                        ? "bg-gray-600"
+                        ? "bg-gray-400"
                         : "bg-[#17b31b]"
                     }`}
                   ></div>
